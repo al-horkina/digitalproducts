@@ -1,0 +1,39 @@
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  color: $white;
+  background: transparent;
+
+  &__logo {
+    font-family: $titleFont;
+    color: $titleColor;
+    font-size: 1.667rem;
+    letter-spacing: 0.8px;
+    padding-top: 3.5rem;
+
+    &:first-letter {
+      font-family: $firstLetter;
+    }
+  }
+}
+
+.soc {
+  font-size: 0;
+  margin-top: 48px;
+
+  &__link {
+    opacity: .7;
+    padding: 0 8px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &:active, &:hover, &:focus {
+      opacity: 1;
+    }
+  }
+}

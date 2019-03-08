@@ -1,0 +1,23 @@
+.chance {
+  @include flex-centered-col();
+  background: url("/assets/img/bg-journey.jpg") center center no-repeat;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+
+  &__text {
+    color: $white;
+    font-family: $titleSmallFont  ;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 3.3px;
+    z-index: 2;
+    max-width: 520px;
+    line-height: 36px;
+    padding-left: 32px;
+  }
+
+  &__img {
+    position: absolute;
+  }
+}

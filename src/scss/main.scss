@@ -1,9 +1,22 @@
 @import "utils/libs";
 @import "utils/vars";
-@import "utils/mixins";
 @import "utils/fonts";
+@import "utils/mixins";
 @import "utils/print";
 
+@import "modules/wrap";
+@import "modules/nav";
+@import "modules/hero";
+@import "modules/journey";
+@import "modules/info";
+@import "modules/chance";
+@import "modules/portfolio";
+@import "modules/collection";
 
 
-@import "modules/header.scss";
+
+body {
+  font-size: 18px;
+}
+
+

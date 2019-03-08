@@ -1,1 +1,30 @@
-// Fonts here
+//@import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+
+@font-face {
+  font-family: 'SantElia Rough Alt Bold ThrDEMO';
+  src: url('/assets/font/SantEliaRoughAlt-BoldThrDEMO.eot');
+  src: url('/assets/font/SantEliaRoughAlt-BoldThrDEMO.eot?#iefix') format('embedded-opentype'),
+  url('/assets/font/SantEliaRoughAlt-BoldThrDEMO.woff2') format('woff2'),
+  url('/assets/font/SantEliaRoughAlt-BoldThrDEMO.woff') format('woff'),
+  url('/assets/font/SantEliaRoughAlt-BoldThrDEMO.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SantElia Script Bold DEMO';
+  src: url('/assets/font/SantEliaScript-BoldDEMO.eot');
+  src: url('/assets/font/SantEliaScript-BoldDEMO.eot?#iefix') format('embedded-opentype'),
+  url('/assets/font/SantEliaScript-BoldDEMO.woff2') format('woff2'),
+  url('/assets/font/SantEliaScript-BoldDEMO.woff') format('woff'),
+  url('/assets/font/SantEliaScript-BoldDEMO.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+

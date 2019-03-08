@@ -1,0 +1,13 @@
+.wrap {
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+
+  &--nav {
+    @include flex-between();
+  }
+
+  &--collection {
+    @include flex-wrap-between();
+  }
+}
