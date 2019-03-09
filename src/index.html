@@ -81,6 +81,7 @@
     <div class="info">
         <img class="info__img" src="/assets/img/Map_with_position_marker.svg" alt="">
         <h2 class="info__title">find me on :</h2>
+
         <div class="info__block">
             <img src="/assets/img/500px_logo_128.svg" alt="" class="info__block-item">
             <img src="/assets/img/Flickr_logo_128.svg" alt="" class="info__block-item">
@@ -92,6 +93,30 @@
     </div>
 
 </section>
+
+<footer class="footer">
+    <h2 class="footer__title">interested in my work? let’s get in touch!</h2>
+
+    <form id="footer__form" @submit="check" novalidate="novalidate" class="form wrap">
+        <ul class="form__list">
+            <!--<li class="form__item" v-if="errors.length"><p v-for="error in errors" class="form__error">{{error}}</p></li>-->
+            <li class="form__item">
+                <input type="text" name="firstName" v-model="firstName" class="form__input" placeholder="Your name"/>
+                <input type="email" name="email" v-model="form__input" class="form__input" placeholder="Your email"/>
+            </li>
+            <li class="form__item">
+                <textarea name="message" id="message" v-model="message" class="form__message"
+                          placeholder="Your message"></textarea>
+            </li>
+            <li class="form__item">
+                <input type="submit" value="Submit" class="form__btn"/>
+            </li>
+        </ul>
+    </form>
+
+    <p class="footer__copyright">© 2015 Leslie Daniels -All rights reserved</p>
+
+</footer>
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
