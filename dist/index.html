@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wonderland</title>
+    <link rel="stylesheet" href="css/main.css">
 <link href="/assets/css/app.css" rel="stylesheet"></head>
 <body>
 <header class="nav">
@@ -26,11 +27,8 @@
             <h3 class="hero__subtitle">I’m leslie, a freelance photographer</h3>
         </div>
     </div>
-    <div>
-        <div class="hero">
-            <h1 class="hero__title">Welcome to Wonderland</h1>
-            <h3 class="hero__subtitle">I’m leslie, a freelance photographer</h3>
-        </div>
+    <div class="hero">
+        <div><img class="hero__img" src="/assets/img/alexis.jpg" alt=""></div>
     </div>
 
 </section>
@@ -58,25 +56,74 @@
         <img class="info__img info__img--left" src="/assets/img/Two_Polaroid_Pictures_64.svg" alt="">
         <h2 class="info__title info__title--left">my portfolio</h2>
     </div>
-    <div class="collection">
-        <div class="wrap wrap--collection">
-            <img src="/assets/img/sl-1.jpg" alt="" class="collection__img">
-            <img src="/assets/img/sl-2.jpg" alt="" class="collection__img">
-            <img src="/assets/img/sl-3.jpg" alt="" class="collection__img">
-            <img src="/assets/img/sl-4.jpg" alt="" class="collection__img">
-            <img src="/assets/img/sl-5.jpg" alt="" class="collection__img">
-            <img src="/assets/img/sl-6.jpg" alt="" class="collection__img">
-            <img src="/assets/img/sl-7.jpg" alt="" class="collection__img">
-            <img src="/assets/img/sl-8.jpg" alt="" class="collection__img">
-            <img src="/assets/img/sl-9.jpg" alt="" class="collection__img">
+
+    <div class="portfolio-slider">
+        <div class="collection">
+            <div class="wrap wrap--collection">
+                <img src="/assets/img/sl-1.jpg" alt="" class="collection__img">
+                <img src="/assets/img/sl-2.jpg" alt="" class="collection__img">
+                <img src="/assets/img/sl-3.jpg" alt="" class="collection__img">
+                <img src="/assets/img/sl-4.jpg" alt="" class="collection__img">
+                <img src="/assets/img/sl-5.jpg" alt="" class="collection__img">
+                <img src="/assets/img/sl-6.jpg" alt="" class="collection__img">
+                <img src="/assets/img/sl-7.jpg" alt="" class="collection__img">
+                <img src="/assets/img/sl-8.jpg" alt="" class="collection__img">
+                <img src="/assets/img/sl-9.jpg" alt="" class="collection__img">
+            </div>
+        </div>
+        <div class="collection">
+            <div><img class="collection__slide" src="/assets/img/arthur-aldyrkhanov.jpg" alt=""></div>
         </div>
     </div>
 </section>
+
+<section class="contacts">
+    <div class="info">
+        <img class="info__img" src="/assets/img/Map_with_position_marker.svg" alt="">
+        <h2 class="info__title">find me on :</h2>
+
+        <div class="info__block">
+            <img src="/assets/img/500px_logo_128.svg" alt="" class="info__block-item">
+            <img src="/assets/img/Flickr_logo_128.svg" alt="" class="info__block-item">
+            <img src="/assets/img/Instagram_Logo_128.svg" alt="" class="info__block-item">
+        </div>
+    </div>
+
+    <div class="location">
+    </div>
+
+</section>
+
+<footer class="footer">
+    <h2 class="footer__title">interested in my work? let’s get in touch!</h2>
+
+    <form id="footer__form" @submit="check" novalidate="novalidate" class="form wrap">
+        <ul class="form__list">
+            <!--<li class="form__item" v-if="errors.length"><p v-for="error in errors" class="form__error">{{error}}</p></li>-->
+            <li class="form__item">
+                <input type="text" name="firstName" v-model="firstName" class="form__input" placeholder="Your name"/>
+                <input type="email" name="email" v-model="form__input" class="form__input" placeholder="Your email"/>
+            </li>
+            <li class="form__item">
+                <textarea name="message" id="message" v-model="message" class="form__message"
+                          placeholder="Your message"></textarea>
+            </li>
+            <li class="form__item">
+                <input type="submit" value="Submit" class="form__btn"/>
+            </li>
+        </ul>
+    </form>
+
+    <p class="footer__copyright">© 2015 Leslie Daniels -All rights reserved</p>
+
+</footer>
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 
 <script type="text/javascript" src="assets/js/slick.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMs11oSAg4opjGt0M8wHfRvT7h0BGOI7U"></script>
+
 <script type="text/javascript" src="assets/js/app.js"></script>
 
 <script type="text/javascript" src="/assets/js/app.js"></script></body>
