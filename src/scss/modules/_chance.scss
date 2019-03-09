@@ -1,6 +1,6 @@
 .chance {
   @include flex-centered-col();
-  background: url("/assets/img/bg-journey.jpg") center center no-repeat;
+  background: url(../img/bg-journey.jpg) center center no-repeat;
   background-size: cover;
   height: 300px;
   position: relative;

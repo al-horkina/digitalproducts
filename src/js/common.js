@@ -12,7 +12,6 @@
 
 
 
-        // map
 
         const $map = $('.location');
         const map = new google.maps.Map(
