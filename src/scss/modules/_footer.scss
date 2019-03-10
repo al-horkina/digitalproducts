@@ -1,12 +1,18 @@
 .footer {
-  background: url("/assets/img/footer-bg.jpg") center center no-repeat;
-  background-size: cover;
   text-align: center;
   color: $white;
   height: 642px;
   padding-top: 25px;
   @include flex-center-col();
   font-family: $mainFont;
+
+  @media all and (max-width: 1024px) and (min-width: 480px) {
+    width: 100vh;
+  }
+  @media all and (max-width: 480px) {
+    width: 100vh;
+    min-width: 480px;
+  }
 
   &__title {
     font-size: 26px;

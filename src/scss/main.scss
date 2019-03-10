@@ -15,11 +15,20 @@
 @import "modules/location";
 @import "modules/footer";
 @import "modules/form";
+@import "modules/parallax";
 
 
 
 body {
   font-size: 18px;
+
+  @media screen and (min-width: 1240px)  {
+    display: block;
+    width: 100%;
+    max-width: 1824px;
+    margin: 0 auto;
+  }
+
 }
 
 

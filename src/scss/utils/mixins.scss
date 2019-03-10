@@ -24,6 +24,11 @@
 	justify-content: space-between;
 }
 
+@mixin flex-around {
+	@include flex();
+	justify-content: space-around;
+}
+
 @mixin flex-left {
 	@include flex();
 	justify-content: flex-start;

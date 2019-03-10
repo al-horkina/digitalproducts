@@ -5,6 +5,17 @@
 
   &--nav {
     @include flex-between();
+
+    @media all and (max-width: 960px) and (min-width: 768px) {
+      @include flex-around();
+    }
+    @media all and (max-width: 768px) and (min-width: 480px) {
+      @include flex-around();
+    }
+    @media all and (max-width: 480px) {
+      width: 100vh;
+      min-width: 480px;
+    }
   }
 
   &--collection {

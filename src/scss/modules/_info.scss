@@ -3,6 +3,17 @@
   @include flex-center-col();
   color: $mainFontColor;
   font-family: $mainFont;
+  opacity: 0;
+  -webkit-animation: opacity-greeting 3s linear;
+  -webkit-animation-fill-mode: forwards;
+
+  @media all and (max-width: 1024px) and (min-width: 480px) {
+    width: 100vh;
+  }
+  @media all and (max-width: 480px) {
+    width: 100vh;
+    min-width: 480px;
+  }
 
   &__img {
     padding-top: 2px;
@@ -13,7 +24,7 @@
   }
 
   &__title {
-    font-size:  26px;
+    font-size: 26px;
     text-transform: uppercase;
     letter-spacing: 2.8px;
     margin: 30px 0 0;
@@ -40,6 +51,27 @@
 
     &-item {
       padding: 0 20px;
+      -webkit-animation: rotate 2s infinite ease;
     }
   }
+
+  @-webkit-keyframes opacity-greeting {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes rotate {
+    from {
+      transform: rotate(0deg)
+    }
+    to {
+      transform: rotate(360deg)
+    }
+
+  }
+
 }

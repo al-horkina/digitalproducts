@@ -6,6 +6,7 @@
   letter-spacing: 3.2px;
   text-transform: uppercase;
   padding: 14px 16px 0 16px;
+  position: relative;
 
   &__list {
     margin-top: 48px;
@@ -19,6 +20,12 @@
     width: 100%;
     @include flex-between();
     margin-bottom: 46px;
+
+    @media all and (max-width: 480px) {
+      @include flex-center-col();
+      width: 100%;
+      font-size: 12px;
+    }
 
     &:last-child {
       @include flex-center-row();
@@ -36,6 +43,11 @@
     width: 49%;
     margin: 0 23px;
 
+    @media all and (max-width: 480px) {
+      width: 100%;
+      margin: 10px 0;
+    }
+
     &:first-child {
       margin-left: 0;
     }
@@ -52,7 +64,7 @@
 
   &__btn {
     color: $white;
-    font-family: $mainFont ;
+    font-family: $mainFont;
     font-size: 24px;
     font-weight: 400;
     text-transform: uppercase;
@@ -61,10 +73,20 @@
     border: 2px solid $white;
     padding: 14px 139px;
     margin: -10px 0;
+    opacity: .6;
+
+    &:hover, &:focus, &:active {
+      opacity: 1;
+    }
 
   }
 
   &__error {
-    display: none;
+    //display: none;
+    color: $white;
+    position: absolute;
+    top: 7px;
+    background: red;
+    @include flex-center-row();
   }
 }

@@ -1,6 +1,15 @@
 .collection {
 
-  &__img{
+  @media all and (max-width: 1024px) and (min-width: 480px) {
+    width: 100vh;
+    margin: 0 auto;
+  }
+  @media all and (max-width: 480px) {
+    width: 100vh;
+    min-width: 480px;
+  }
+
+  &__img {
     padding-bottom: 20px;
   }
 

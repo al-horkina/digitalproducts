@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wonderland</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/slick/slick.css">
     <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
 <link href="assets/css/app.css" rel="stylesheet"></head>
@@ -13,17 +15,18 @@
     <div class="wrap wrap--nav">
         <div class="nav__logo">Leslie Daniels</div>
         <div class="soc">
-            <a class="soc__link" href="#"><img src="assets/img/Twiiter.png" alt=""></a>
-            <a class="soc__link" href="#"><img src="assets/img/Instagram.png" alt=""></a>
-            <a class="soc__link" href="#"><img src="assets/img/Flickr.png" alt=""></a>
-            <a class="soc__link" href="#"><img src="assets/img/500px.png" alt=""></a>
+            <a class="soc__link" href="#"><img src="assets/img/Twiiter.png" alt="">#</a>
+            <a class="soc__link" href="#"><img src="assets/img/Instagram.png" alt="">#</a>
+            <a class="soc__link" href="#"><img src="assets/img/Flickr.png" alt="">#</a>
+            <a class="soc__link" href="#"><img src="assets/img/500px.png" alt="">#</a>
         </div>
     </div>
 </header>
 
 <section class="hero-slider">
     <div>
-        <div class="hero">
+        <div class="hero"
+             style="background: url(assets/img/hero-bg.jpg) center center no-repeat; background-size: cover; ">
             <h1 class="hero__title">Welcome to Wonderland</h1>
             <h3 class="hero__subtitle">I’m leslie, a freelance photographer</h3>
         </div>
@@ -46,10 +49,12 @@
     </div>
 </section>
 
-<section class="chance">
-    <h4 class="chance__text">You never get a second chance
-        to make a good first impression</h4>
-    <img class="chance__img" src="assets/img/qq.svg" alt="">
+<section class="parallax">
+    <div class="chance container">
+        <h4 class="chance__text">You never get a second chance
+            to make a good first impression</h4>
+        <img class="chance__img" src="assets/img/qq.svg" alt="">
+    </div>
 </section>
 
 <section class="portfolio">
@@ -95,23 +100,27 @@
 
 </section>
 
-<footer class="footer">
+<footer class="footer"
+        style="background: url(assets/img/footer-bg.jpg) center center no-repeat; background-size: cover;">
     <h2 class="footer__title">interested in my work? let’s get in touch!</h2>
 
-    <form id="footer__form" @submit="check" novalidate="novalidate" class="form wrap">
+    <form id="footer__form" novalidate="novalidate" class="form wrap" @submit="checkForm">
         <ul class="form__list">
-            <!--<li class="form__item" v-if="errors.length"><p v-for="error in errors" class="form__error">{{error}}</p></li>-->
             <li class="form__item">
-                <input type="text" name="firstName" v-model="firstName" class="form__input" placeholder="Your name"/>
-                <input type="email" name="email" v-model="form__input" class="form__input" placeholder="Your email"/>
+                <input id="name" type="text" name="firstName" v-model="name" class="form__input" tabindex="1"
+                       placeholder="Your name"/>
+                <input id="email" type="email" name="email" v-model="email" class="form__input" tabindex="2"
+                       placeholder="Your email"/>
             </li>
             <li class="form__item">
-                <textarea name="message" id="message" v-model="message" class="form__message"
+                <textarea name="message" id="message" v-model="message" class="form__message" tabindex="3"
                           placeholder="Your message"></textarea>
             </li>
+            <li class="form__item form__error" v-if="errors.length"><p v-for="error in errors">{{error}}</p></li>
             <li class="form__item">
-                <input type="submit" value="Submit" class="form__btn"/>
+                <input type="submit" value="Submit" tabindex="4" class="form__btn"/>
             </li>
+
         </ul>
     </form>
 
