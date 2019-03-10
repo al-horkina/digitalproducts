@@ -4,13 +4,7 @@
   height: 300px;
   position: relative;
 
-  @media all and (max-width: 1024px) and (min-width: 480px) {
-    width: 100vh;
-  }
-  @media all and (max-width: 480px) {
-    width: 100vh;
-    min-width: 480px;
-  }
+
 
   &__text {
     color: $white;
