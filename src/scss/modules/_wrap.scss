@@ -6,15 +6,14 @@
   &--nav {
     @include flex-between();
 
-    @media all and (max-width: 960px) and (min-width: 768px) {
-      @include flex-around();
-    }
-    @media all and (max-width: 768px) and (min-width: 480px) {
-      @include flex-around();
-    }
-    @media all and (max-width: 480px) {
+    @include respond-to(largeScreen) {
       width: 100vh;
-      min-width: 480px;
+      @include flex-around();
+    }
+
+  @include respond-to(middleSmartphone) {
+      width: 100vh;
+      min-width: 320px;
     }
   }
 

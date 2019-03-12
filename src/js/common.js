@@ -42,7 +42,7 @@
         const marker = new google.maps.Marker({
             position: {lat: 28.613, lng: -80.811},
             map: map,
-            title: '91 Nolan Extensions Suite 670',
+            title: 'Titusville',
             icon: image
         });
 
@@ -77,7 +77,7 @@ const app = new Vue({
             e.preventDefault();
         },
         validEmail: function (email) {
-            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+           let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
         }
     }

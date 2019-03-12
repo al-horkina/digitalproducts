@@ -21,9 +21,13 @@
     @include flex-between();
     margin-bottom: 46px;
 
-    @media all and (max-width: 480px) {
+    @include respond-to(smallScreen)  {
+      width: 80%;
+    }
+
+    @include respond-to(middleSmartphone)  {
       @include flex-center-col();
-      width: 100%;
+      width: 80%;
       font-size: 12px;
     }
 
@@ -43,7 +47,7 @@
     width: 49%;
     margin: 0 23px;
 
-    @media all and (max-width: 480px) {
+    @include respond-to(middleSmartphone)  {
       width: 100%;
       margin: 10px 0;
     }
@@ -82,7 +86,6 @@
   }
 
   &__error {
-    //display: none;
     color: $white;
     position: absolute;
     top: 7px;

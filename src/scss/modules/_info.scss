@@ -7,12 +7,20 @@
   -webkit-animation: opacity-greeting 3s linear;
   -webkit-animation-fill-mode: forwards;
 
-  @media all and (max-width: 1024px) and (min-width: 480px) {
+  &:first-child {
+
+    @include respond-to(largeScreen) {
+      padding-top: 100px;
+    }
+
+  }
+
+  @include respond-to(largeScreen) {
     width: 100vh;
   }
-  @media all and (max-width: 480px) {
+  @include respond-to(middleSmartphone) {
     width: 100vh;
-    min-width: 480px;
+    min-width: 320px;
   }
 
   &__img {
@@ -29,9 +37,15 @@
     letter-spacing: 2.8px;
     margin: 30px 0 0;
     line-height: 22px;
+    text-align: center;
 
     &--left {
       padding-left: 15px;
+    }
+
+    @include respond-to(middleSmartphone) {
+      width: 100vh;
+      font-size: 32px;
     }
   }
 
@@ -43,6 +57,12 @@
     line-height: 25px;
     margin: 0;
     padding: 32px 0 5px 15px;
+
+    @include respond-to(middleSmartphone) {
+      width: 80%;
+      font-size: 24px;
+    }
+
   }
 
   &__block {

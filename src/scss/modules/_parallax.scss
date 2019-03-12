@@ -12,10 +12,10 @@
   overflow: hidden;
   background-image: url("../img/bg-journey.jpg");
 
-  @media all and (max-width: 1024px) and (min-width: 480px) {
+  @include respond-to(largeScreen) {
     width: 100vh;
   }
-  @media all and (max-width: 480px) {
+  @include respond-to(middleSmartphone) {
     width: 100vh;
     min-width: 480px;
   }

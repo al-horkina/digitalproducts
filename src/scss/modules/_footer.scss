@@ -1,7 +1,7 @@
 .footer {
   text-align: center;
   color: $white;
-  height: 642px;
+  height: 642px;//падинг снизу
   padding-top: 25px;
   @include flex-center-col();
   font-family: $mainFont;

@@ -7,6 +7,13 @@
   color: $white;
   background: transparent;
 
+  @include respond-to(middleSmartphone){
+    position: relative;
+    width: 100vh;
+    min-width: 320px;
+  }
+
+
   &__logo {
     font-family: $titleFont;
     color: $titleColor;
@@ -14,15 +21,27 @@
     letter-spacing: 0.8px;
     padding-top: 3.5rem;
 
+    @include respond-to(middleSmartphone){
+      color: $btnColor;
+      font-size: 3.667rem;
+      margin: 0 auto;
+    }
+
     &:first-letter {
       font-family: $firstLetter;
     }
+
+
   }
 }
 
 .soc {
   font-size: 0;
   margin-top: 48px;
+
+  @include respond-to(middleSmartphone) {
+    display: none;
+  }
 
   &__link {
     opacity: .7;

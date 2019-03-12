@@ -22,11 +22,15 @@
 body {
   font-size: 18px;
 
-  @media screen and (min-width: 1240px)  {
+  @include respond-to(desktop){
     display: block;
     width: 100%;
     max-width: 1824px;
     margin: 0 auto;
+  }
+
+  @include respond-to(middleSmartphone){
+    min-width: 320px;
   }
 
 }

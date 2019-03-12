@@ -17,10 +17,26 @@
     line-height: 36px;
     padding-left: 34px;
     padding-top: 10px;
+
+    @include respond-to(middleSmartphone) {
+      font-size: 32px;
+      max-width: 80%;
+      text-align: center;
+      padding-left: 0;
+
+    }
   }
 
   &__img {
     position: absolute;
+  }
+
+  @include respond-to(largeScreen) {
+    width: 100vh;
+  }
+  @include respond-to(middleSmartphone) {
+    width: 100vh;
+    min-width: 320px;
   }
 
 }

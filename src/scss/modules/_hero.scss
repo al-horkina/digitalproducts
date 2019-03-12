@@ -7,14 +7,21 @@
   @include flex-centered-col();
 
   &-slider {
-    @media all and (max-width: 1024px) and (min-width: 480px) {
+
+    @include respond-to(largeScreen) {
       width: 100vh;
       height: auto;
     }
-    @media all and (max-width: 480px) {
+    @include respond-to(middleSmartphone) {
       width: 100vh;
-      min-width: 480px;
+      display: none;
+      min-width: 320px;
+    }@include respond-to(largePhone)  {
+      width: 100vh;
+      display: none;
+      min-width: 320px;
     }
+
   }
 
   &__title {
@@ -23,13 +30,6 @@
     font-family: $titleSmallFont;
     font-size: 72px;
     font-weight: 400;
-
-    @media all and (max-width: 768px) and (min-width: 480px) {
-      font-size: 52px;
-    }
-    @media all and (max-width: 480px) {
-      font-size: 36px;
-    }
   }
 
   &__subtitle {
@@ -40,12 +40,6 @@
     margin: 15px 0;
     font-weight: 300;
 
-    @media all and (max-width: 768px) and (min-width: 480px) {
-      font-size: 24px;
-    }
-    @media all and (max-width: 480px) {
-      font-size: 18px;
-    }
   }
 
   &__img {
