@@ -4,13 +4,15 @@
     width: 1002px;
     height: 640px;
     margin-bottom: 101px;
+
   }
 
   @include respond-to(largeScreen) {
     width: 100vh;
   }
   @include respond-to(middleSmartphone) {
-    width: 80%;
-    margin: 0 auto;
-  }
+   width: 80%;
+   margin: 0 auto;
+   display: none;
+ }
 }

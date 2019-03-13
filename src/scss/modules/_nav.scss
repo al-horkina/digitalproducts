@@ -9,7 +9,6 @@
 
   @include respond-to(middleSmartphone){
     position: relative;
-    width: 100vh;
     min-width: 320px;
   }
 

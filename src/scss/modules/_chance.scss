@@ -4,8 +4,6 @@
   height: 300px;
   position: relative;
 
-
-
   &__text {
     color: $white;
     font-family: $titleSmallFont;
@@ -19,10 +17,10 @@
     padding-top: 10px;
 
     @include respond-to(middleSmartphone) {
-      font-size: 32px;
+      font-size: 18px;
       max-width: 80%;
-      text-align: center;
-      padding-left: 0;
+      margin: 0;
+      padding: 0;
 
     }
   }
@@ -31,12 +29,6 @@
     position: absolute;
   }
 
-  @include respond-to(largeScreen) {
-    width: 100vh;
-  }
-  @include respond-to(middleSmartphone) {
-    width: 100vh;
-    min-width: 320px;
-  }
+
 
 }

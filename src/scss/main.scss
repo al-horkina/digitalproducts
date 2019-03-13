@@ -22,7 +22,7 @@
 body {
   font-size: 18px;
 
-  @include respond-to(desktop){
+  @include respond-to(desktopMax){
     display: block;
     width: 100%;
     max-width: 1824px;

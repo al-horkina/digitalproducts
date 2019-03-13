@@ -19,7 +19,7 @@
     width: 100vh;
   }
   @include respond-to(middleSmartphone) {
-    width: 100vh;
+    //width: 100vh;
     min-width: 320px;
   }
 
@@ -44,8 +44,8 @@
     }
 
     @include respond-to(middleSmartphone) {
-      width: 100vh;
-      font-size: 32px;
+      width: 80%;
+      font-size: 24px;
     }
   }
 
@@ -60,7 +60,8 @@
 
     @include respond-to(middleSmartphone) {
       width: 80%;
-      font-size: 24px;
+      font-size: 16px;
+      text-align: left;
     }
 
   }
@@ -69,9 +70,17 @@
     margin: 30px 0 0;
     @include flex();
 
+    @include respond-to(middleSmartphone) {
+      @include flex-centered-col();
+    }
+
     &-item {
       padding: 0 20px;
       -webkit-animation: rotate 2s infinite ease;
+
+      @include respond-to(middleSmartphone) {
+        padding: 5px;
+      }
     }
   }
 

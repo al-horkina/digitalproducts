@@ -16,7 +16,9 @@
     width: 100vh;
   }
   @include respond-to(middleSmartphone) {
-    width: 100vh;
-    min-width: 480px;
+    width: 100%;
+
+
   }
+
 }

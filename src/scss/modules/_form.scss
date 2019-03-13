@@ -8,12 +8,22 @@
   padding: 14px 16px 0 16px;
   position: relative;
 
+  @include respond-to(middleSmartphone) {
+    width: 100%;
+    padding-left: 0;
+  }
+
   &__list {
     margin-top: 48px;
     list-style: none;
     padding-left: 0;
     width: 1000px;
     @include flex-center-col();
+
+    @include respond-to(middleSmartphone) {
+      width: 100%;
+      padding: 0;
+    }
   }
 
   &__item {
@@ -41,16 +51,17 @@
     padding: 14px 16px;
     letter-spacing: 3.2px;
 
+    @include respond-to(middleSmartphone)  {
+      width: 80%;
+      margin: 10px 0;
+    }
+
   }
 
   &__input {
     width: 49%;
     margin: 0 23px;
 
-    @include respond-to(middleSmartphone)  {
-      width: 100%;
-      margin: 10px 0;
-    }
 
     &:first-child {
       margin-left: 0;
@@ -83,6 +94,13 @@
       opacity: 1;
     }
 
+    @include respond-to(middleSmartphone)  {
+      width: 80%;
+      margin: 10px 0;
+      text-align: center;
+      padding: 10px;
+    }
+
   }
 
   &__error {
@@ -91,5 +109,9 @@
     top: 7px;
     background: red;
     @include flex-center-row();
+
+    @include respond-to(middleSmartphone)  {
+      font-size: 10px;
+    }
   }
 }

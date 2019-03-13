@@ -1,17 +1,13 @@
 .footer {
   text-align: center;
   color: $white;
-  height: 642px;//падинг снизу
+  min-height: 642px;
   padding-top: 25px;
   @include flex-center-col();
   font-family: $mainFont;
 
-  @media all and (max-width: 1024px) and (min-width: 480px) {
+  @include respond-to(largeScreen) {
     width: 100vh;
-  }
-  @media all and (max-width: 480px) {
-    width: 100vh;
-    min-width: 480px;
   }
 
   &__title {
@@ -21,6 +17,10 @@
     line-height: 22px;
     padding-left: 10px;
     text-transform: uppercase;
+
+    @include respond-to(middleSmartphone) {
+      font-size: 18px;
+    }
   }
 
   &__copyright {
@@ -31,6 +31,11 @@
     letter-spacing: 1.05px;
     border-top: 1px solid $white;
     width: 680px;
+
+    @include respond-to(middleSmartphone) {
+      width: 100%;
+      padding: 20px;
+    }
 
   }
 
