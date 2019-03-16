@@ -8,14 +8,15 @@
   text-transform: uppercase;
   padding: 14px 16px 0 16px;
   position: relative;
+  box-sizing: border-box;
 
   @include respond-to(middleSmartphone) {
     width: 100%;
     padding-left: 0;
   }
 
-  @include respond-to(largeScreen)  {
-    width: 80%;
+  @include respond-to(largeScreen) {
+    width: 100%;
   }
 
   &__list {
@@ -36,11 +37,11 @@
     @include flex-between();
     margin-bottom: 46px;
 
-    @include respond-to(smallScreen)  {
+    @include respond-to(smallScreen) {
       width: 80%;
     }
 
-    @include respond-to(middleSmartphone)  {
+    @include respond-to(middleSmartphone) {
       @include flex-center-col();
       width: 80%;
       font-size: 12px;
@@ -56,7 +57,7 @@
     padding: 14px 16px;
     letter-spacing: 3.2px;
 
-    @include respond-to(middleSmartphone)  {
+    @include respond-to(middleSmartphone) {
       width: 80%;
       margin: 10px 0;
     }
@@ -66,7 +67,6 @@
   &__input {
     width: 49%;
     margin: 0 23px;
-
 
     &:first-child {
       margin-left: 0;
@@ -100,7 +100,7 @@
       opacity: 1;
     }
 
-    @include respond-to(middleSmartphone)  {
+    @include respond-to(middleSmartphone) {
       width: 80%;
       margin: 10px 0;
       text-align: center;
@@ -116,7 +116,7 @@
     background: red;
     @include flex-center-row();
 
-    @include respond-to(middleSmartphone)  {
+    @include respond-to(middleSmartphone) {
       font-size: 10px;
     }
   }

@@ -16,11 +16,7 @@
   }
 
   @include respond-to(largeScreen) {
-    width: 100vh;
-  }
-  @include respond-to(middleSmartphone) {
-    //width: 100vh;
-    min-width: 320px;
+    width: 100%;
   }
 
   &__img {
@@ -56,7 +52,7 @@
     letter-spacing: .8px;
     line-height: 25px;
     margin: 0;
-    padding: 32px 0 5px 15px;
+    padding: 32px 15px 5px;
 
     @include respond-to(middleSmartphone) {
       width: 80%;

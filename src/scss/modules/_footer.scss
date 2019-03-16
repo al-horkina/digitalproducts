@@ -31,6 +31,7 @@
     letter-spacing: 1.05px;
     border-top: 1px solid $white;
     max-width: 680px;
+    box-sizing: border-box;
 
     @include respond-to(middleSmartphone) {
       width: 100%;

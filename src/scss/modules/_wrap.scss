@@ -7,7 +7,7 @@
     @include flex-between();
 
     @include respond-to(largeScreen) {
-      width: 100vh;
+      width: 100%;
       @include flex-around();
     }
 
