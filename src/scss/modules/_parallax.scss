@@ -13,7 +13,7 @@
   background-image: url("../img/bg-journey.jpg");
 
   @include respond-to(largeScreen) {
-    width: 100vh;
+    width: 100%;
   }
   @include respond-to(middleSmartphone) {
     width: 100%;

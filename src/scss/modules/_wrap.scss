@@ -12,17 +12,13 @@
     }
 
   @include respond-to(middleSmartphone) {
-      //width: 100vh;
-      min-width: 320px;
+      @include flex-center-col();
     }
   }
 
   &--collection {
     @include flex-wrap-between();
 
-    @include respond-to(middleSmartphone) {
 
-      width: 320px;
-    }
   }
 }

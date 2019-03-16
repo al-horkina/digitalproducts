@@ -1,4 +1,5 @@
 .form {
+  width: 100%;
   opacity: 0.6;
   color: #3c3930;
   font-size: 16px;
@@ -13,11 +14,15 @@
     padding-left: 0;
   }
 
+  @include respond-to(largeScreen)  {
+    width: 80%;
+  }
+
   &__list {
     margin-top: 48px;
     list-style: none;
     padding-left: 0;
-    width: 1000px;
+    width: 100%;
     @include flex-center-col();
 
     @include respond-to(middleSmartphone) {
@@ -86,9 +91,10 @@
     letter-spacing: 4.8px;
     background: transparent;
     border: 2px solid $white;
-    padding: 14px 139px;
+    padding: 14px 0;
     margin: -10px 0;
     opacity: .6;
+    width: 40%;
 
     &:hover, &:focus, &:active {
       opacity: 1;

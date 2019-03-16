@@ -1,25 +1,18 @@
 .hero {
   box-sizing: border-box;
   position: relative;
-  width: 100%;
-  height: 600px;
+  //width: 100%;
   color: $titleColor;
   @include flex-centered-col();
 
   &-slider {
 
     @include respond-to(largeScreen) {
-      width: 100vh;
+      //width: 100%;
       height: auto;
     }
     @include respond-to(middleSmartphone) {
-      width: 100vh;
-      display: none;
-      min-width: 320px;
-    }@include respond-to(largePhone)  {
-      width: 100vh;
-      display: none;
-      min-width: 320px;
+      //width: 100%;
     }
 
   }
@@ -30,6 +23,13 @@
     font-family: $titleSmallFont;
     font-size: 72px;
     font-weight: 400;
+
+    @include respond-to(middleSmartphone) {
+      font-size: 24px;
+    }
+    @include respond-to(largeScreen) {
+      font-size: 38px;
+    }
   }
 
   &__subtitle {
@@ -40,11 +40,35 @@
     margin: 15px 0;
     font-weight: 300;
 
+    @include respond-to(middleSmartphone) {
+      font-size: 12px;
+    }
+    @include respond-to(largeScreen) {
+      font-size: 18px;
+    }
+
+  }
+
+  &__box {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    position: relative;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include flex-centered-col();
+
   }
 
   &__img {
-    height: 100%;
     width: 100%;
+    height: 100%;
   }
 
 }

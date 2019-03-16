@@ -26,10 +26,18 @@ module.exports = {
         rules: [{
             test: /\.js$/,
             loader: 'babel-loader',
-            exclude: '/node_modules/'
+           /* exclude: '/node_modules/'
         }, {
             test: /\.(png|jpg|gif|svg)$/,
             loader: 'file-loader',
+            options: {
+                name: '[name].[ext]'
+            }*/
+            exclude: '/node_modules/'
+        }, {
+            test: /\.(png|jpg|gif|svg)$/,
+            // loader: 'file-loader',
+            loader: 'url-loader',
             options: {
                 name: '[name].[ext]'
             }

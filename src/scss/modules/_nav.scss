@@ -9,7 +9,7 @@
 
   @include respond-to(middleSmartphone){
     position: relative;
-    min-width: 320px;
+    background: #364C56;
   }
 
 
@@ -21,9 +21,10 @@
     padding-top: 3.5rem;
 
     @include respond-to(middleSmartphone){
-      color: $btnColor;
-      font-size: 3.667rem;
+      //color: $btnColor;
+      font-size: 2rem;
       margin: 0 auto;
+      padding-top: .5rem;
     }
 
     &:first-letter {
@@ -39,7 +40,7 @@
   margin-top: 48px;
 
   @include respond-to(middleSmartphone) {
-    display: none;
+    margin: .5rem;
   }
 
   &__link {

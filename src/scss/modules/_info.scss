@@ -10,7 +10,7 @@
   &:first-child {
 
     @include respond-to(largeScreen) {
-      padding-top: 100px;
+      width: 100%;
     }
 
   }
@@ -50,7 +50,7 @@
   }
 
   &__text {
-    width: 685px;
+    max-width: 685px;
     font-size: 18px;
     text-align: center;
     letter-spacing: .8px;
@@ -69,17 +69,27 @@
   &__block {
     margin: 30px 0 0;
     @include flex();
+    text-align: center;
 
-    @include respond-to(middleSmartphone) {
-      @include flex-centered-col();
+    div {
+      @include respond-to(middleSmartphone) {
+        height: 50%;
+        width: 50%;
+      }
+
     }
 
     &-item {
       padding: 0 20px;
-      -webkit-animation: rotate 2s infinite ease;
+
+      &:hover, &focus {
+        -webkit-animation: rotate 2s infinite ease;
+      }
 
       @include respond-to(middleSmartphone) {
         padding: 5px;
+        height: 50%;
+        width: 50%;
       }
     }
   }
